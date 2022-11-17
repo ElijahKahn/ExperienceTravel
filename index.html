@@ -11,34 +11,324 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=
-  Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 
   </head>
 
   <body>
     <!-- header -->
     <header>
-      <a href="index.html" class="logo">Experience</a>
+
+      <a href="#" class="logo">Experience</a>
       <div class="bx bx-menu" id="menu-icon"></div>
 
       <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="destinations.html">Destinations</a></li>
         <li><a href="packages.html">Packages</a></li>
         <li><a href="profile.html">Profile</a></li>
+        <!-- <li>
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+          </form>
+        </li> -->
       </ul>
     </header>
 
     <!--Home section-->
     <section class="home" id="home">
       <div class="home-text">
-        <h1>Experience</h1>
-        <p>The things your friends have</p>
-        <a href="profile.html" class="home-btn">Login</a>
-      </div>
+        <h1>Experience <br> Travel</h1>
+        <p>How your friends and family do.</p>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+       </div>
 
     </section>
+
+    <!--Login section-->
+    <div id="id01" class="modal">
+
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="img/img_avatar2.jpeg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+    <!--Signup section-->
+
+
+    <div id="id02" class="modal2">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+        <div class="container">
+          <h1>Sign Up</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <!--container--->
+	<section class="container">
+		<div class="text">
+			<h2>Services your<br> Friends ENJOYED!</h2>
+		</div>
+
+		<div class="row-items">
+			<div class="container-box">
+				<div class="container-img">
+					<img src="img/trip1.png">
+				</div>
+				<h4>Ship Cruises</h4>
+			</div>
+
+			<div class="container-box">
+				<div class="container-img">
+					<img src="img/trip2.png">
+				</div>
+				<h4>Food Tours</h4>
+			</div>
+
+			<!-- <div class="container-box">
+				<div class="container-img">
+					<img src="img/trip3.png">
+				</div>
+				<h4>Summer Rest</h4>
+			</div> -->
+
+
+			<div class="container-box">
+				<div class="container-img">
+					<img src="img/trip4.png">
+				</div>
+				<h4>Mountains Tours</h4>
+			</div>
+
+		</div>
+
+    <div class="more">
+      <a href="services.html">See more services</a>
+    </div>
+
+	</section>
+
+	<!--Package section--->
+	<!-- <section class="package" id="package">
+		<div class="title">
+			<h2>Our Upcoming <br> Tour Package</h2>
+		</div>
+
+		<div class="package-content">
+			<div class="box">
+				<div class="thum">
+					<img src="img/img1.png">
+					<h3>$499</h3>
+				</div>
+
+				<div class="dest-content">
+					<div class="location">
+						<h4>London</h4>
+						<p>4h - 5h</p>
+					</div>
+					<div class="stars">
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="thum">
+					<img src="img/img2.png">
+					<h3>$499</h3>
+				</div>
+
+				<div class="dest-content">
+					<div class="location">
+						<h4>New York</h4>
+						<p>4h - 5h</p>
+					</div>
+					<div class="stars">
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="thum">
+					<img src="img/img3.png">
+					<h3>$499</h3>
+				</div>
+
+				<div class="dest-content">
+					<div class="location">
+						<h4>Dubai</h4>
+						<p>4h - 5h</p>
+					</div>
+					<div class="stars">
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section> -->
+
+	<!--destination section--->
+	<section class="destination" id="destination">
+		<div class="title">
+			<h2>Destinations your <br> Friends LOVED!</h2>
+		</div>
+
+		<div class="destination-content">
+			<div class="col-content">
+				<img src="img/img-1.jpg">
+				<h5>Machu Picchu</h5>
+				<p>PERU</p>
+			</div>
+
+			<div class="col-content">
+				<img src="img/img-2.jpg">
+				<h5>Sierra Madre</h5>
+				<p>Central Mexico</p>
+			</div>
+
+			<!-- <div class="col-content">
+				<img src="img/img-3.jpg">
+				<h5>Machu Picchu</h5>
+				<p>PERU</p>
+			</div>
+
+			<div class="col-content">
+				<img src="img/img-4.jpg">
+				<h5>Machu Picchu</h5>
+				<p>PERU</p>
+			</div>
+
+			<div class="col-content">
+				<img src="img/img-5.jpg">
+				<h5>Machu Picchu</h5>
+				<p>PERU</p>
+			</div>
+
+			<div class="col-content">
+				<img src="img/img-6.jpg">
+				<h5>Machu Picchu</h5>
+				<p>PERU</p>
+			</div> -->
+
+		</div>
+
+    <div class="more">
+      <a href="destinations.html">See more destinations</a>
+    </div>
+	</section>
+
+	<!--Newsletter--->
+	<section class="newsletter">
+		<div class="news-text">
+			<h2>Newsletter</h2>
+			<p>Subscribe for new destinations <br> and adventures</p>
+		</div>
+
+		<div class="send">
+			<form>
+				<input type="email" placeholder="Email Address" required>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+	</section>
+
+	<!--footer--->
+	<section id="contact">
+		<div class="footer">
+			<div class="main">
+				<div class="list">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="about.html">About us</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Help</a></li>
+					</ul>
+				</div>
+
+				<div class="list">
+					<h4>Contact Info</h4>
+					<ul>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</div>
+
+				<div class="list">
+					<h4>Connect</h4>
+					<div class="social">
+						<a href="#"><i class='bx bxl-facebook' ></i></a>
+						<a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+						<a href="#"><i class='bx bxl-twitter' ></i></a>
+						<a href="#"><i class='bx bxl-linkedin' ></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="end-text">
+			<p>Copyright ©2022 All rights reserved</p>
+		</div>
+	</section>
 
 
     <!-- link to js -->
