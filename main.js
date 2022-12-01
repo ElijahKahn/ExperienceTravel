@@ -35,3 +35,27 @@ window.onclick = function(event) {
     modal2.style.display = "none";
   }
 };
+
+window.addEventListener("load", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        2000
+    )
+});
+
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
+$('button').click(function() {
+  $(this).text(function(_, text) {
+    return text === "Follow" ? "Unfollow" : "Follow";
+  });
+  if($(this).text() == "Follow") {
+    $(this).removeClass('unfollow');
+  } else if($(this).text() == "Unfollow") {
+    $(this).addClass('unfollow');
+  }
+});
